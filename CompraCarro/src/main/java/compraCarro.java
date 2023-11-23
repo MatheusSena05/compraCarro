@@ -2,26 +2,37 @@
 public class compraCarro {
 
 	public static void main(String[] args) {
-		
-		
-		int preco = 500000;
-		int saldoDoCliente = 20000;
+
 		boolean pix = false;
-		boolean crédito = true;
-		boolean boleto = false;
-		String modelo ="Jeep Renegade 2022";
-		   
-		if(crédito) {
+		boolean boleto = true;
+		Boolean credito = false;
+		int preco = 500000;
+		int saldoDoCliente = 700000;
+		String modelo = "Jeep Renegade 2022";
+
+		if (pix = saldoDoCliente >= preco) {
+			int desconto = 7500;
+			preco = preco - desconto;
+
+			System.out.println("Compra realizada com sucesso " + modelo + ", no valor de R$" + preco + ".");
+
+		} else if (boleto = saldoDoCliente >= preco) {
+			int juros = 8000;
+			preco = preco + juros;
+
+			System.out.println("Compra realizada com sucesso " + modelo + ", no valor de " + preco + " seu saldo é " + saldoDoCliente + ".");
+
+		} else if (credito = saldoDoCliente >= preco) {
+			int juros = 9500;
+			preco = preco + juros;
+
+			System.out.println("Compra realizada com sucesso " + modelo + ", no valor de " + preco + ".");
 			
-			System.out.println("Parabens");
-			
-			
-		}else {
-			
-			System.out.println("");
+		} else {
+
+			System.out.println("Compra não realizada.");
+
 		}
-		
-	
 
 	}
 
